@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expo Renta Corta y Vacacional 2da Edición 2026</title>
+    <meta name="description" content="El único evento en Chile 100% enfocado en renta corta y vacacional. Estación Mapocho, 28 y 29 de agosto.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logos/logo.svg" alt="Expo Renta Corta Logo" style="height: 40px;">
+            </a>
+            <div class="nav-cta">
+                <a href="#tickets" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Comprar Entrada</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN 1: HERO -->
+    <header id="hero">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="assets/brand/intro expo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-content">
+                <span class="badge">2da edición · 2026</span>
+                <h1>La expo de renta corta más grande de Chile <span class="text-gradient">vuelve en agosto.</span></h1>
+                <p class="hero-subtitle">El único evento en Chile 100% enfocado en renta corta y vacacional.</p>
+                
+                <div class="pills-info">
+                    <div class="pill">📍 Estación Mapocho</div>
+                    <div class="pill">📅 28 y 29 agosto</div>
+                    <div class="pill">🇨🇱 Santiago, Chile</div>
+                </div>
+
+                <div class="ctas">
+                    <a href="#" class="btn btn-primary" style="flex-direction: column; gap: 0.2rem; line-height: 1.2;">
+                        <span>Compra tu entrada</span>
+                        <span style="font-family: var(--font-secondary); font-size: 1rem; font-weight: 400; opacity: 0.9;">Preventa $5.000</span>
+                    </a>
+                    <a href="#" class="btn btn-secondary">Quiero exponer / auspiciar</a>
+                </div>
+
+                <div class="countdown" id="timer">
+                    <div class="countdown-item">
+                        <span class="countdown-val" id="days">00</span>
+                        <span class="countdown-label">días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-val" id="hours">00</span>
+                        <span class="countdown-label">horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-val" id="minutes">00</span>
+                        <span class="countdown-label">min</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-val" id="seconds">00</span>
+                        <span class="countdown-label">seg</span>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <!-- SECCIÓN 2: CONTADORES DE CREDIBILIDAD -->
+    <section id="stats" class="bg-dark">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="5000">0</span></h3>
+                    <p>personas / día</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+<span class="counter" data-target="70">0</span></h3>
+                    <p>expositores</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="2">0</span>da</h3>
+                    <p>edición</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="1.1" data-decimals="1">0</span>M</h3>
+                    <p>alcance digital</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="5.1" data-decimals="1">0</span>M</h3>
+                    <p>visualizaciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: PROPÓSITO Y MANIFIESTO -->
+    <section id="proposito">
+        <div class="container">
+            <span class="section-tag">propósito</span>
+            <h2 class="section-title section-title-sm">La renta corta no es una moda.<br>Es la nueva forma de invertir en Chile.</h2>
+            <div class="manifesto-grid">
+                <div class="manifesto-content">
+                    <p class="lead" style="margin-bottom: 2rem;">En un mercado que crece rápido pero donde abundan mitos y desinformación, reunimos a los actores clave para entregar claridad, herramientas y oportunidades reales.</p>
+                </div>
+                <ul class="points-list">
+                    <li><span><strong style="color: var(--color-orange);">Aterrizar el panorama real</strong> de la renta corta en Chile (demanda, números, zonas, regulación).</span></li>
+                    <li><span><strong style="color: var(--color-blue);">Eliminar el miedo</strong> y la improvisación con educación práctica y casos reales.</span></li>
+                    <li><span><strong style="color: var(--color-green);">Elevar el estándar de operación</strong>: procesos, pricing, tecnología y gestión.</span></li>
+                    <li><span><strong style="color: var(--color-soft-blue);">Conectar el ecosistema completo</strong>: inversionistas, hosts, operadores, proveedores, inmobiliarias y marcas.</span></li>
+                    <li><span><strong style="color: var(--color-orange);">Activar oportunidades concretas</strong>: alianzas, soluciones, financiamiento e inversiones ejecutables.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: ¿PARA QUIÉN ES? — 3 PERFILES -->
+    <section id="perfiles">
+        <div class="container">
+            <h2 class="section-title">Esta Expo tiene algo para ti, sin importar en qué etapa estás.</h2>
+            <div class="perfiles-grid">
+                <div class="perfil-card">
+                    <div class="perfil-card-inner">
+                        <span class="perfil-tag">Perfil 1</span>
+                        <h3>Quiero invertir en renta corta.</h3>
+                        <p>Tengo ahorros o acceso a crédito hipotecario y busco generar ingresos pasivos sin depender de untrabajo secundario.</p>
+                    </div>
+                </div>
+                <div class="perfil-card">
+                    <div class="perfil-card-inner">
+                        <span class="perfil-tag">Perfil 2</span>
+                        <h3>Ya opero y quiero escalar.</h3>
+                        <p>Tengo propiedades en Airbnb o Booking pero opero de forma informal. Busco profesionalizarme.</p>
+                    </div>
+                </div>
+                <div class="perfil-card">
+                    <div class="perfil-card-inner">
+                        <span class="perfil-tag">Perfil 3</span>
+                        <h3>Soy una empresa o marca del ecosistema.</h3>
+                        <p>Quiero llegar a inversionistas, hosts y operadores del sector con perfil decisor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: ZONAS DEL EVENTO -->
+    <section id="zonas">
+        <div class="container">
+            <h2 class="section-title">Un ecosistema completo bajo un mismo techo.</h2>
+            <p class="section-subtitle">5 zonas temáticas · +70 expositores · Centro Cultural Estación Mapocho.</p>
+            <div class="zonas-grid">
+                <div class="zona-card glass-card">
+                    <div class="zona-icon"><img src="assets/brand/certificado cristal.png" alt=""></div>
+                    <h4>Aprender</h4>
+                    <p>Escenario + speakers</p>
+                </div>
+                <div class="zona-card glass-card">
+                    <div class="zona-icon"><img src="assets/brand/dolar cristal.png" alt=""></div>
+                    <h4>Invertir</h4>
+                    <p>Proyectos en venta</p>
+                </div>
+                <div class="zona-card glass-card">
+                    <div class="zona-icon"><img src="assets/brand/maleta cristal.png" alt=""></div>
+                    <h4>Amoblar</h4>
+                    <p>Equipamiento</p>
+                </div>
+                <div class="zona-card glass-card">
+                    <div class="zona-icon"><img src="assets/brand/manija cristal.png" alt=""></div>
+                    <h4>Operar</h4>
+                    <p>Tech y gestión</p>
+                </div>
+                <div class="zona-card glass-card">
+                    <div class="zona-icon"><img src="assets/brand/isotipo cristal.png" alt=""></div>
+                    <h4>Publicar</h4>
+                    <p>Plataformas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: EMBAJADORES CONFIRMADOS -->
+    <section id="speakers">
+        <div class="container">
+            <span class="section-tag">Embajadores</span>
+            <h2 class="section-title">Aprende de quienes ya lo están haciendo.</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image-container">
+                        <img src="assets/brand/felipe bio.png" alt="Felipe Viel" class="speaker-image">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Felipe Viel</h3>
+                        <p class="speaker-meta">Inversionista · TV Personality · Fundador Viel & De Guzman Miami.</p>
+                        <p class="speaker-social">(+200k seguidores Instagram)</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image-container">
+                        <img src="assets/brand/romi bio.png" alt="Romi Capetillo" class="speaker-image">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Romi Capetillo</h3>
+                        <p class="speaker-meta">Inversionista · Autora · Podcast "Ni tan financieros".</p>
+                        <p class="speaker-social">(+200k IG · +9.000 YouTube)</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image-container">
+                        <img src="assets/brand/francisco bio.png" alt="Francisco Ackerman" class="speaker-image">
+                    </div>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">Francisco Ackerman</h3>
+                        <p class="speaker-meta">Principal influencer financiero de Chile · Autor best seller · Podcaster.</p>
+                        <p class="speaker-social">(+650k IG · +550k TIKTOK)</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 3rem; opacity: 0.6; text-align: center;">Nota: + más speakers y panelistas por confirmar.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: INFO DEL EVENTO -->
+    <section id="info" class="bg-gradient">
+        <div class="container">
+            <div class="info-layout glass-card">
+                <div class="info-text">
+                    <h2 class="section-title">Información Clave</h2>
+                    <ul class="info-list">
+                        <li>
+                            <div class="icon-box icon-orange">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div><strong>Lugar:</strong> Estación Mapocho</div>
+                        </li>
+                        <li>
+                            <div class="icon-box icon-blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            </div>
+                            <div><strong>Fecha:</strong> 28 y 29 agosto</div>
+                        </li>
+                        <li>
+                            <div class="icon-box icon-green">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <div><strong>Horario:</strong> 09:00 – 19:00 h</div>
+                        </li>
+                        <li>
+                            <div class="icon-box icon-soft-blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                            </div>
+                            <div><strong>Preventa:</strong> $5.000</div>
+                        </li>
+                    </ul>
+                    <div class="ctas">
+                        <a href="#" class="btn btn-primary" style="flex-direction: column; gap: 0.2rem; line-height: 1.2;">
+                            <span>Compra tu entrada</span>
+                            <span style="font-family: var(--font-secondary); font-size: 1rem; font-weight: 400; opacity: 0.9;">Preventa $5.000</span>
+                        </a>
+                        <a href="#" class="btn btn-secondary">¿Cómo llegar?</a>
+                    </div>
+                </div>
+                <div class="info-image">
+                    <div class="info-img-wrapper">
+                        <img src="assets/brand/CCEM.webp" alt="Estación Mapocho">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8: PARA EXPOSITORES Y AUSPICIADORES (B2B) -->
+    <section id="b2b">
+        <div class="container">
+            <h2 class="section-title">Posiciona tu marca frente a 5.000 decisores del sector.</h2>
+            <p class="lead">Con +70 expositores y 1.1M de alcance digital, la Expo es el mayor punto de contacto de la industria en Chile.</p>
+            
+            <div class="steps-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 4rem 0;">
+                <div class="step-item">
+                    <span class="step-num">01</span>
+                    <p>Elige tu tipo de participación — Expositor (stand 3×3 mt.) o Auspiciador (naming + escenario).</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">02</span>
+                    <p>Selecciona el pack que mejor se ajusta a tu marca y presupuesto.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">03</span>
+                    <p>Activa tu presencia y conecta con inversionistas, hosts y operadores.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 9: EQUIPO FUNDADOR -->
+    <section id="equipo">
+        <div class="container">
+            <h2 class="section-title">Armada por quienes conocen el mercado desde adentro.</h2>
+            <div class="team-list">
+                <div class="team-item">
+                    <div class="team-img-wrapper">
+                        <img src="assets/brand/Rodrigo Callejón.webp" alt="Rodrigo Callejón" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <strong>Rodrigo Callejón</strong><br>CEO LUP · +120 lanzamientos.
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-img-wrapper">
+                        <img src="assets/brand/Juan David Salgado.webp" alt="Juan David Salgado" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <strong>Juan David Salgado</strong><br>Marketing · AdsHouse · LUP.
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-img-wrapper">
+                        <img src="assets/brand/Cristián Waidele.webp" alt="Cristián Waidele" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <strong>Cristián Waidele</strong><br>CEO HOM Group.
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-img-wrapper">
+                        <img src="assets/brand/Francisco Tagle.webp" alt="Francisco Tagle" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <strong>Francisco Tagle</strong><br>HOM SpA · 20+ años.
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-img-wrapper">
+                        <img src="assets/brand/Sergio Poblete.webp" alt="Sergio Poblete" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <strong>Sergio Poblete</strong><br>Productor · Haddock.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 10: LOGOS EXPOSITORES -->
+    <section id="marcas">
+        <div class="container">
+            <h3 style="text-align: center; margin-bottom: 3rem;">Ya son parte de la Expo.</h3>
+            <div class="logos-ticker" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 3rem; opacity: 0.6;">
+                <span style="font-size: 1.5rem; font-weight: 700;">Hostify</span>
+                <span style="font-size: 1.5rem; font-weight: 700;">Breezeway</span>
+                <span style="font-size: 1.5rem; font-weight: 700;">HostBuddy AI</span>
+                <span style="font-size: 1.5rem; font-weight: 700;">Conduit</span>
+                <span style="font-size: 1.5rem; font-weight: 700;">+Más</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 11: FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item glass-card" style="margin-bottom: 1.5rem; padding: 0; overflow: hidden;">
+                    <button class="faq-header" style="width: 100%; text-align: left; background: transparent; border: none; padding: 1.5rem; color: white; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font-primary);">
+                        <h4 style="margin: 0; font-size: 1.2rem;">¿Qué incluye la entrada?</h4>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: rgba(255, 255, 255, 0.8);"><strong>Respuesta:</strong> Acceso completo a los dos días de feria, ingreso a todas las charlas en los diferentes escenarios, material de apoyo y entrada a la fiesta de cierre para hacer networking con otros profesionales del sector.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card" style="margin-bottom: 1.5rem; padding: 0; overflow: hidden;">
+                    <button class="faq-header" style="width: 100%; text-align: left; background: transparent; border: none; padding: 1.5rem; color: white; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font-primary);">
+                        <h4 style="margin: 0; font-size: 1.2rem;">¿Hay estacionamiento en la Estación Mapocho?</h4>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: rgba(255, 255, 255, 0.8);"><strong>Respuesta:</strong> Sí, el recinto cuenta con estacionamiento concesionado sujeto a disponibilidad. Además, existen múltiples alternativas de aparcamiento subterráneo en las inmediaciones y excelente conexión mediante la línea 2 del Metro (Estación Cal y Canto).</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card" style="margin-bottom: 1.5rem; padding: 0; overflow: hidden;">
+                    <button class="faq-header" style="width: 100%; text-align: left; background: transparent; border: none; padding: 1.5rem; color: white; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font-primary);">
+                        <h4 style="margin: 0; font-size: 1.2rem;">¿Puedo comprar la entrada en la puerta el día del evento?</h4>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: rgba(255, 255, 255, 0.8);"><strong>Respuesta:</strong> Sí se podrá comprar en puerta, pero estará sujeta al aforo del recinto y a un precio ticket full. Te sugerimos asegurar tu cupo y beneficios adicionales comprando la preventa por esta misma página web.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card" style="margin-bottom: 1.5rem; padding: 0; overflow: hidden;">
+                    <button class="faq-header" style="width: 100%; text-align: left; background: transparent; border: none; padding: 1.5rem; color: white; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font-primary);">
+                        <h4 style="margin: 0; font-size: 1.2rem;">¿Cómo accedo al precio de preventa?</h4>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: rgba(255, 255, 255, 0.8);"><strong>Respuesta:</strong> Solo debes hacer clic en cualquier botón de "Compra tu entrada" en esta página. Se te redirigirá a nuestra ticketera oficial donde se aplicará automáticamente el descuento especial de lanzamiento vigente temporalmente.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card" style="margin-bottom: 1.5rem; padding: 0; overflow: hidden;">
+                    <button class="faq-header" style="width: 100%; text-align: left; background: transparent; border: none; padding: 1.5rem; color: white; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font-primary);">
+                        <h4 style="margin: 0; font-size: 1.2rem;">¿Las charlas del escenario principal quedan grabadas?</h4>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p style="padding: 0 1.5rem 1.5rem 1.5rem; color: rgba(255, 255, 255, 0.8);"><strong>Respuesta:</strong> Así es. Como beneficio exclusivo, todos los asistentes recibirán acceso posterior a la plataforma educativa de la Expo, donde podrán revivir las charlas y paneles más importantes a partir de la semana siguiente al evento.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <p style="margin-bottom: 1.5rem; font-size: 1.2rem;">¿Tienes más preguntas?</p>
+                <a href="#" class="btn btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    Escríbenos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 12: CTA FINAL + FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top glass-card" style="text-align: center; padding: 4rem;">
+                <blockquote style="font-size: 2rem; font-family: var(--font-primary); font-weight: 600; margin-bottom: 2rem;">
+                    "La renta corta bien hecha no solo genera ingresos: construye patrimonio, libertad y calidad de vida."
+                </blockquote>
+                <p style="font-size: 1.2rem; margin-bottom: 3rem;">No te quedes afuera del evento que está transformando la industria en Chile.</p>
+                <div class="ctas">
+                    <a href="#" class="btn btn-primary" style="flex-direction: column; gap: 0.2rem; line-height: 1.2;">
+                        <span>Compra tu entrada</span>
+                        <span style="font-family: var(--font-secondary); font-size: 1rem; font-weight: 400; opacity: 0.9;">Preventa $5.000</span>
+                    </a>
+                    <a href="#" class="btn btn-secondary">Contactar por WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; border-top: 1px solid var(--glass-border); padding-top: 3rem;">
+                
+                <div class="footer-contacts" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <h4 style="font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Contactos Oficiales</h4>
+                    
+                    <div class="contact-card glass-card" style="padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem;">
+                        <div class="icon-box icon-orange" style="width: 48px; height: 48px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>
+                            <strong style="display: block; font-size: 1.1rem; color: white;">Tamara Castro</strong>
+                            <span style="display: block; font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem;">Jefa de Desarrollo y Experiencias HOM</span>
+                            <a href="https://wa.me/56938808480" style="color: var(--color-orange); text-decoration: none; font-weight: 500;">+56 9 3880 8480</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card glass-card" style="padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem;">
+                        <div class="icon-box icon-blue" style="width: 48px; height: 48px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>
+                            <strong style="display: block; font-size: 1.1rem; color: white;">Sergio Poblete</strong>
+                            <span style="display: block; font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem;">Productor General Expo Renta Corta</span>
+                            <a href="https://wa.me/56997379489" style="color: var(--color-blue); text-decoration: none; font-weight: 500;">+56 9 9737 9489</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-info" style="display: flex; flex-direction: column;">
+                    <h4 style="font-family: var(--font-primary); font-size: 1.5rem; margin-bottom: 1.5rem;">Redes Sociales</h4>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 3rem;">
+                        <a href="#" style="color: white; text-decoration: none; padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; transition: var(--transition); border: 1px solid var(--glass-border);">Instagram</a>
+                        <a href="#" style="color: white; text-decoration: none; padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; transition: var(--transition); border: 1px solid var(--glass-border);">TikTok</a>
+                        <a href="#" style="color: white; text-decoration: none; padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; transition: var(--transition); border: 1px solid var(--glass-border);">YouTube</a>
+                    </div>
+
+                    <div class="footer-brand" style="margin-top: auto;">
+                        <img src="assets/brand/logo-expo.png" alt="Expo Renta Corta Logo" style="max-height: 80px; width: auto; max-width: 100%; margin-bottom: 1.5rem; filter: brightness(0) invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.3)); display: block;">
+                        <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">&copy; 2026 Expo Renta Corta y Vacacional. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
