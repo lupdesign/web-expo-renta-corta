@@ -1,25 +1,26 @@
-/* 
+/*
    Expo Renta Corta 2026 - Modern Design System
-   Colors:
-   --color-blue: #2947F2
-   --color-green: #009D65
-   --color-orange: #F17D16
-   --color-soft-blue: #A2BCF1
+   Colors (Updated):
+   --color-blue: #2A3FFA
+   --color-green: #009F60
+   --color-orange: #FF7600
+   --color-soft-blue: #9BBAF4
+   --color-complementary: #EDEDEF
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;600;800&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 :root {
-    --color-blue: #2947F2;
-    --color-green: #009D65;
-    --color-orange: #F17D16;
-    --color-soft-blue: #A2BCF1;
-    --color-white: #ffffff;
+    --color-blue: #2A3FFA;
+    --color-green: #009F60;
+    --color-orange: #FF7600;
+    --color-soft-blue: #9BBAF4;
+    --color-white: #EDEDEF;
     --color-black: #0a0a0b;
     --color-dark-gray: #1a1a1c;
     
-    --font-primary: 'Funnel Display', sans-serif;
-    --font-secondary: 'Roboto', sans-serif;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
     
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -34,17 +35,18 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-color: var(--color-black);
     color: var(--color-white);
     font-family: var(--font-secondary);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 h1, h2, h3, h4, .font-title {
     font-family: var(--font-primary);
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.1;
 }
 
@@ -290,7 +292,7 @@ section {
 .section-tag {
     color: var(--color-orange);
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 2px;
     font-size: 0.9rem;
     margin-bottom: 1rem;
@@ -438,6 +440,11 @@ section {
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
+@keyframes border-scanner {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 .perfil-card {
     position: relative;
     padding: 2px; /* Border thickness */
@@ -504,23 +511,68 @@ section {
     font-size: 1.05rem;
 }
 
-/* Zonas Section */
+/* Zonas Section (Ecosistema) */
 .zonas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Zonas Section (Ecosistema) */
+.zonas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 3rem;
 }
 
 .zona-card {
-    text-align: center;
-    padding: 2.5rem 1.5rem;
+    position: relative;
+    border-radius: 24px;
+    background: #0D0D0E;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem; /* Strictly uniform padding */
+    min-height: 420px;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.zona-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: #121214;
+}
+
+/* Individual Card Glows (Static) */
+.card-blue {
+    background: linear-gradient(to top right, rgba(42, 63, 250, 0.08), transparent 40%), #0D0D0E;
+}
+.card-green {
+    background: linear-gradient(to top right, rgba(0, 159, 96, 0.08), transparent 40%), #0D0D0E;
+}
+.card-orange {
+    background: linear-gradient(to top right, rgba(255, 118, 0, 0.08), transparent 40%), #0D0D0E;
+}
+.card-soft-blue {
+    background: linear-gradient(to top right, rgba(155, 186, 244, 0.08), transparent 40%), #0D0D0E;
+}
+
+.zona-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .zona-icon {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 1.5rem;
+    width: 120px; /* Increased 50% from 80px */
+    height: 120px; /* Increased 50% from 80px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -528,6 +580,26 @@ section {
 
 .zona-icon img {
     max-height: 100%;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+}
+
+.zona-header h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.zona-body {
+    flex: 1;
+}
+
+.zona-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
 }
 
 /* Speakers Section */
@@ -676,4 +748,59 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .navbar .logo img {
+        max-height: 40px;
+    }
+    
+    .navbar .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .ctas .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .zona-card {
+        padding: 2rem; /* Consistent padding on mobile */
+        min-height: auto;
+    }
+    
+    .zona-icon {
+        width: 100px; /* Scaled down slightly for mobile but still large */
+        height: 100px;
+    }
 }
